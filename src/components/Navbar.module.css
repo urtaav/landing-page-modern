@@ -1,0 +1,60 @@
+/**
+ * NAVBAR
+ *
+ * -------------------------------------------------------------------
+ */
+ .navbar {
+    background-color: transparent;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+  }
+  .navbar.navbar-shrink {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--main-color);
+    padding: 10px;
+  }
+  .navbar.navbar-shrink .bg-brand {
+    /* background: #ffff; */
+    /* border-radius: 30px; */
+    /* color: var(--main-color); */
+    padding: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease;
+  }
+  .navbar > .container {
+    padding: 0 15px;
+  }
+  .navbar .navbar-brand {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .navbar .nav-item {
+    margin-left: 40px;
+  }
+  .navbar .nav-item .nav-link {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+  }
+  
+  .navbar .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.5 ease;
+    transform: scale(0);
+  }
+  .navbar .nav-item .nav-link.active::before,
+  .navbar .nav-item .nav-link:hover::before {
+    transform: scale(1);
+  }
